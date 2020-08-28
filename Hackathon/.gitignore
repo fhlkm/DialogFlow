@@ -1,0 +1,17 @@
+# Miscellaneous
+*.class
+*.jar
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
+.idea/
+target/
+
+
