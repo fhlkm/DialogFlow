@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hackathon-otpj",
+  "private_key_id": "94e3faf5afa025eb919110d58e025037e119b75a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXpNuVxHJcNaGz\ncopkK6FINjFjE5x3t2frlooBSuTOTTV+erM04APO9fkbpYLHGbmXr0QKCACx/tfe\nTSoF2q7kLQ/OSxtnDyprF0L2r3t7q61jJB9eA5hicOTm9pSYzLd0Xyj3LrPErJVC\nZb9NivsK1tjWvKxJMldCBW79W0vHwDwfItnCtmrXBo4PzSr/PVVPxc703sieie2g\n6GQeUeo9EKr0DNDCXigsxfBA++rxIS2zobLCAB2sEDQmn843mnwlWBhjxGuJ1WIp\n5Qo5OoD55JFYh1mycAZBYdgiexq56MYM8Jk65Olw7LsXsY4URvMAXsyBYEHA0M3a\n20uGel3XAgMBAAECggEAGdCOMvosr6bPnqE2juPggk77bE7X2Ydm0POhDaRGvBnn\nq97OaAdkjpRP8lVkJGmsLva+oeiH2cU00VqYd0Opdx12rdsaUJqD0ZQ1qZHo9v4c\nN57cGiCJjeSDCxBZ7oMXDd/vNNkF8Eqi5Bk3DkfFAazeX/vhZlqEATC0mruydE/x\nhmYKdd0RqK7IBI3teCLjTZhBMXgU9GxyJXBS87kIQoW5LNUWlt2BcGTF56stYy/k\nkOY/M5M0bNo1AVSyuOr5pvBJAUXYrrSMsIPz8xgUyN6h6JjYjnqdytvBvX5O+EHX\nvUz4i37ziKC24PyJjavTP5crq5WLnGsfh/y5anK3/QKBgQDUa2jL+DHlXxse8eVH\njpzKOAjU+GECaWTvGNM/CRLsTUCKZObt6hneepP+WzMVahHSdetSfwm64Avp87NP\n/tiPIWHC/Tdzmpl0FgtrBEJ8nwQvK4DevARYu0CFJZIHG+q2PP5I51pnyz/Zy0CM\nW23aU1MO/B9A+KVGgjN1NLhBAwKBgQC2wWyXLC0hR34xmgX+Tv29sIwpxzoJ4zG3\nY6rlCfT0ypsjxTb+jbBwKATwwGolIZutsRcsKonN39bcCHUCuOV6vrwb1qtlccIz\n1StJ2IGSOK1PaXueEwrH74hfoxYQSddf22dDUQo8c23EJvjb8p431sOXXdPJLCcr\niSh81iHVnQKBgGfhh0SIwk377tV5Urll4wN518ffGAIH7NaI+3YOR/TL6s5DfjPH\nkpMcuxdfHmJQlxqnlEep3OZI/0qQZZaveNS2bIrhLqcYagc9aKQTVzh+w5sV2VYT\n+MQz/t+eegWD/4rT1T9t9OZhnX4zSgPaCqUErs/bOKWbc6hBsEyXVaxlAoGBAKWA\nqSyGDyCyM/ALgh35vwSH24cCKudFXoKrudnNmI4O5UwRj2obOot3UnIMbpPNycQU\nOd3/b+iHK3b8GasrcnYkQQoc7/7gdHSoOZmYfk7DEQB3kEFpETxbCe9CK/r4RBlF\nAlEOFO0Fw4P9nyTgpLQAxARSLjdiyt48SfQzn1RpAoGAQ4Nxzd8ZRapfXRxlplyF\nREI2tEvft4eDOiNV6SZd83ZhPxmFCj5yhhz2tejlcjZhRYYvEZdSMBOYghynhu1C\nMasUQoQGPUV2b3BoQ5YTr51dma2Ghf64Dw4D4CG2orUrCBb+YVrVVxk8f6T63dfs\nURlDovfguByy7vcxCc4Ukqc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-iprwha@hackathon-otpj.iam.gserviceaccount.com",
+  "client_id": "103785468091406739869",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-iprwha%40hackathon-otpj.iam.gserviceaccount.com"
+}
