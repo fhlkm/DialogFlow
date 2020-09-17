@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,55 +26,81 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/HelloWorldServlet")
 public class HelloWorldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//	static String jsonPath="\"C:\\Users\\hanlu.feng\\git\\dialogflowfile\\PlantesBot-df051857c11c.json\"";
+	//	static String jsonPath="\"C:\\Users\\hanlu.feng\\git\\dialogflowfile\\PlantesBot-df051857c11c.json\"";
 	static String jsonPath="C:/Users/hanlu.feng/git/dialogflowfile/PlantesBot-df051857c11c.json";
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public HelloWorldServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public HelloWorldServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		resp.setContentType("text/html;charset=UTF-8");  
-        PrintWriter out = resp.getWriter();  
-        out.println("hello world,servlet2");
-        System.out.println("This is a log");
-        out.close();  
-        sendData2DailogFlow();
+		resp.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		Map<String, QueryResult> map = sendData2DailogFlow();
+		out.println("Conneting....");
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n");
+		if(map.size()>0){
+			for(String key: map.keySet()){
+				sb.append(key+" : "+map.get(key).getIntent().getDisplayName());
+				sb.append("\n");
+			}
+		}
+		out.println(sb.toString());
+		out.close();
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String requestData = request.getReader().lines().collect(Collectors.joining());
+		System.out.println("Receive data is "+"\n"+requestData);
+		PrintWriter out = response.getWriter();
+		Map<String, QueryResult> map = sendData2DailogFlow();
+		out.println("Conneting....");
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n");
+		if(map.size()>0){
+			for(String key: map.keySet()){
+				sb.append(key+" : "+map.get(key).getIntent().getDisplayName());
+				sb.append("\n");
+			}
+		}
+		out.println(sb.toString());
+		out.close();
 	}
-	
-	public void sendData2DailogFlow(){
+
+	public Map<String, QueryResult> sendData2DailogFlow(){
 
 
-		String text="what is the color of earth ";
+		String text="Please go back ";
 		String countrycode ="en-US";
-		String projectId="plantesbot-pcnpcj";
+//		String projectId="plantesbot-pcnpcj";
+		String projectId="hackathon-otpj";
 		String sessionID="123456789";
 		List<String>texts = new ArrayList<>();
 		texts.add(text);
+		Map<String, QueryResult> map =null;
 		try {
 //			DetectIntentTexts.authExplicit(jsonPath);
-			Map<String, QueryResult> map = DetectIntentTexts.detectIntentTexts(projectId, texts, sessionID, countrycode);
+			map = DetectIntentTexts.detectIntentTexts(projectId, texts, sessionID, countrycode);
 		} catch (ApiException | IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 
+		return map;
 	}
 
 }
