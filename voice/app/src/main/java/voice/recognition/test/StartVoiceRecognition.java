@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
-
+//This class use google engine
 public class StartVoiceRecognition extends Activity {
     private final int REQUEST_SPEECH_RECOGNIZER = 3000;
     private TextView mTextView;
